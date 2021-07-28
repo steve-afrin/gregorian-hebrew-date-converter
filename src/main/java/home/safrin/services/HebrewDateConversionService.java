@@ -16,7 +16,15 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 /**
- * Primary service class for invoking REST webservice endpoints on hebcal.com.
+ * <p>Service class for invoking RESTful webservice endpoints on hebcal.com to convert dates between the
+ * Gregorian and Hebrew calendars.</p>
+ * <p>Here are a couple {@code curl} commands to test the actual REST endpoints from the command line:</p>
+ * <ul>
+ *   <li>Converting from a Gregorian date to a Hebrew date:
+ *   {@code curl -G https://www.hebcal.com/converter?cfg=json\&gy=1996\&gm=3\&gd=15\&g2h=1}</li>
+ *   <li>Converting from a Hebrew date to a Gregorian date:
+ *   {@code curl -G https://www.hebcal.com/converter?cfg=json\&hy=5781\&hm=Av\&hd=13\&h2g=1}</li>
+ * </ul>
  */
 public class HebrewDateConversionService {
   private static final Logger LOG = LoggerFactory.getLogger(HebrewDateConversionService.class);

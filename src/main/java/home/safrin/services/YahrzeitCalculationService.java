@@ -15,8 +15,10 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 /**
- * [The Yahrzeit API](https://www.hebcal.com/home/1705/yahrzeit-anniversary-api) is documented as
- * <em>experimental</em>, so it probably will work, but might have a few glitches in some way.
+ * <p>The Yahrzeit API (https://www.hebcal.com/home/1705/yahrzeit-anniversary-api) is documented as
+ * <em>experimental</em>, so it probably will work, but might have a few glitches in some way.</p>
+ * <p>Here's a {@code curl} command that exercises the API for testing from the command line:
+ * {@code curl -G https://www.hebcal.com/yahrzeit?cfg=json\&v=yahrzeit\&n1=Dad\&y1=1996\&m1=3\&d1=15\&years=5}</p>
  */
 public class YahrzeitCalculationService {
   private static final Logger LOG = LoggerFactory.getLogger(YahrzeitCalculationService.class);
